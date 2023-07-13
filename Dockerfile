@@ -7,5 +7,5 @@ RUN mvn package -DskipTests
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/your-application.jar .
-CMD ["java", "-jar", "voll.med.jar"]
+COPY --from=build /app/target/voll.med-0.0.1-SNAPSHOT.jar .
+CMD ["java", "-jar", "voll.med-0.0.1-SNAPSHOT.jar"]
